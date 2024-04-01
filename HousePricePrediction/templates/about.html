@@ -1,0 +1,113 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <style>
+        body {
+            background-image: url('{% static 'img1.jpg' %}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            margin: 50px 0 0;
+            padding: 0;
+            height: calc(100vh - 50px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            overflow-y: scroll;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            animation: fadeInUp 1s forwards;
+            opacity: 0;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 28px;
+            animation: fadeInUp 1s forwards;
+            opacity: 0;
+            line-height: 1.5;
+            text-align: justify;
+            margin-bottom: 20px;
+            transition: all 0.5s ease;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        li {
+            font-size: 20px;
+            animation: fadeInUp 1s forwards;
+            opacity: 0;
+            line-height: 1.5;
+            transition: all 0.5s ease;
+        }
+
+        /* Animation for fading in elements */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        li:hover {
+            transform: scale(1.1); /* Scale up on hover */
+            font-weight: bold; /* Add bold font weight */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>About this project</h1>
+
+    <h2>This project is about:</h2>
+
+    <ul>
+        <li>Developing a house price prediction system using machine learning.</li>
+        <li>Utilizing Linear Regression for accurate price prediction based on various factors.</li>
+        <li>Building the web user interface using Django, a high-level Python web framework.</li>
+        <li>Training the model using scikit-learn, a popular machine learning library in Python.</li>
+    </ul>
+
+    <h2>Team members:</h2>
+
+    <ul>
+        <li>Syed Murtuza</li>
+        <li>Vinayak .S</li>
+        <li>Akash.G</li>
+        <li>Shreyas SK</li>
+    </ul>
+
+    <h2 style="margin-top: 20px;">Guided by</h2>
+    <h2>Mr. Vishwas Rudramurthy</h2>
+
+</div>
+
+</body>
+</html>
